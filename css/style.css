@@ -1,0 +1,266 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #333;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #444;
+    transition: color 0.3s, transform 0.3s ease;
+    display: inline-block; 
+  }
+  
+  .nav-links a:hover {
+    color: #9567f7;
+    transform: scale(1.1);
+  }
+  
+
+  .container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+  }
+  
+
+  .sobre h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #9567f7;
+  }
+  
+  .sobre p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  .projetos h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #9567f7;
+  }
+  
+  .projetos p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  .contato h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #9567f7;
+  }
+  
+  .contato p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  .contato-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contato-links li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .contato-links a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .contato-links a:hover {
+    color: #ca91fb;
+  }
+
+.modo-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #444;
+  transition: transform 0.3s;
+}
+
+.modo-toggle:hover {
+  transform: scale(1.2);
+}
+
+
+body.dark-mode .logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #e0e0e0;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .nav-links a {
+  color: #e0e0e0;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+body.dark-mode .nav-links a:hover {
+  color: #ca91fb;
+  transform: scale(1.1);
+}
+
+body.dark-mode .modo-toggle {
+  color: #e0e0e0;
+}
+
+
+body.dark-mode .sobre h1,
+body.dark-mode .projetos h1,
+body.dark-mode .contato h1 {
+  color: #ca91fb;
+}
+
+body.dark-mode p,
+body.dark-mode .sobre p,
+body.dark-mode .projetos p,
+body.dark-mode .contato p {
+  color: #ccc;
+}
+
+
+body.dark-mode .contato-links a {
+  color: #bb86fc;
+}
+
+body.dark-mode .contato-links a:hover {
+  color: #f4cee6;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.fade-delay-1 {
+  transition-delay: 0.2s;
+}
+
+.fade-delay-2 {
+  transition-delay: 0.4s;
+}
+
+.fade-delay-3 {
+  transition-delay: 0.6s;
+}
+
+.fade-delay-4 {
+  transition-delay: 0.8s;
+}
+.fade-delay-5 {
+  transition-delay: 1.0s;
+}
+.projetos-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.card-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.card-links a {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #ca91fb;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.card-links a:hover {
+  background-color: #9567f7;
+}
+
+
+body.dark-mode .card {
+  background-color: #1f1f1f;
+  color: #f4cee6;
+}
+
+body.dark-mode .card-links a {
+  background-color: #9567f7;
+}
+
+body.dark-mode .card-links a:hover {
+  background-color: #ca91fb;
+}
