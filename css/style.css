@@ -206,6 +206,9 @@ body.dark-mode .contato-links a:hover {
 .fade-delay-5 {
   transition-delay: 1.0s;
 }
+.fade-delay-6 {
+    transition-delay: 1.2s;
+    }
 .projetos-container {
   display: grid;
   grid-template-columns: 1fr;
