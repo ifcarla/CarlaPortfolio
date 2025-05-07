@@ -1,7 +1,6 @@
 const botaoModo = document.getElementById("modo-toggle");
 const body = document.body;
 
-// Carrega modo salvo no localStorage
 if (localStorage.getItem("modo") === "escuro") {
   body.classList.add("dark-mode");
   botaoModo.textContent = "☀️";
@@ -13,13 +12,15 @@ botaoModo.addEventListener("click", () => {
   localStorage.setItem("modo", modoAtual);
   botaoModo.textContent = modoAtual === "escuro" ? "☀️" : "🌙";
 });
-// Fade-in suave ao rolar
+
 const elementos = document.querySelectorAll('.fade-in');
 
 const observador = new IntersectionObserver((entradas) => {
-  entradas.forEach((entrada) => {
+  entradas.forEach((entrada, index) => {
     if (entrada.isIntersecting) {
-      entrada.target.classList.add('visible');
+      setTimeout(() => {
+        entrada.target.classList.add('visible');
+      }, index * 300); 
     }
   });
 }, {
